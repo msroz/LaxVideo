@@ -1,3 +1,10 @@
+--exec "perl -Ilib -It/lib -MTest::Name::FromLine -MTest::Pretty"
+--timer
+--merge
+--trap
+--color
+-w
 -l
--r t
--Mt::Util
+-v
+-r
+-PPretty

@@ -1,17 +1,8 @@
-use strict;
 use warnings;
-use Test::More;
+use v5.20.1;
+use Test::LoadAllModules;
 
-
-use Lax;
-use Lax::Web;
-use Lax::Web::View;
-use Lax::Web::ViewFunctions;
-
-use Lax::DB::Schema;
-use Lax::Web::Dispatcher;
-
-
-pass "All modules can load.";
-
-done_testing;
+BEGIN {
+    local $ENV{LAX_ENV} = 'testing';
+    all_uses_ok( search_path => 'Lax' );
+}
