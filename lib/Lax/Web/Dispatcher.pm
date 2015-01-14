@@ -11,8 +11,8 @@ any '/' => sub {
     $counter++;
     $c->session->set('counter' => $counter);
 
-    my $db = Lax::Container->instance->db;
-    my $row = $db->get_by_id(id => 1);
+    my $instance = Lax::Container->instance;
+    my $row = $instance->model('Data::Movie')->fetch_by_id(id => 1);
 
     return $c->render('index.tx', {
         counter => $counter,
