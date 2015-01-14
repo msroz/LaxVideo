@@ -14,8 +14,9 @@ any '/' => sub {
     my $instance = Lax::Container->instance;
     my $row = $instance->model('Data::Movie')->fetch_by_id(id => 1);
 
-    return $c->render('index.tx', {
+    return $c->render('index.tt', {
         counter => $counter,
+        row     => $row ? $row->get_columns : +{},
     });
 };
 
