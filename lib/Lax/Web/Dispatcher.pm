@@ -9,6 +9,9 @@ any '/' => sub {
     my $counter = $c->session->get('counter') || 0;
     $counter++;
     $c->session->set('counter' => $counter);
+
+    my $row = $c->db->get_by_id(id => 1);
+
     return $c->render('index.tx', {
         counter => $counter,
     });

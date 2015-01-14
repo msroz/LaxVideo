@@ -1,4 +1,12 @@
-CREATE TABLE IF NOT EXISTS member (
+CREATE TABLE IF NOT EXISTS movies (
     id           INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    name         VARCHAR(255)
-);
+    status       TINYINT UNSIGNED NOT NULL,
+    title        VARCHAR(255) NOT NULL,
+    url          VARCHAR(255) NOT NULL,
+    youtube_id   VARCHAR(255) NOT NULL,
+    score        INTEGER UNSIGNED NOT NULL,
+    `like`       INTEGER UNSIGNED NOT NULL,
+    dislike      INTEGER UNSIGNED NOT NULL,
+    created_at   INTEGER UNSIGNED NOT NULL,
+    updated_at   INTEGER UNSIGNED NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
