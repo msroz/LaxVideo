@@ -3,6 +3,7 @@ use strict;
 use warnings;
 use utf8;
 use Amon2::Web::Dispatcher::RouterBoom;
+use Lax::Container;
 
 any '/' => sub {
     my ($c) = @_;
@@ -10,7 +11,8 @@ any '/' => sub {
     $counter++;
     $c->session->set('counter' => $counter);
 
-    my $row = $c->db->get_by_id(id => 1);
+    my $db = Lax::Container->instance->db;
+    my $row = $db->get_by_id(id => 1);
 
     return $c->render('index.tx', {
         counter => $counter,
