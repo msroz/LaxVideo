@@ -4,11 +4,16 @@ use warnings;
 use utf8;
 use parent qw(Teng);
 
+use Lax::Config::DB;
 use Sub::Args;
 
-__PACKAGE__->load_plugin('Count');
-__PACKAGE__->load_plugin('Replace');
 __PACKAGE__->load_plugin('Pager');
+
+sub new {
+    my ($class, %args) = @_;
+    my $config = Lax::Config::DB->current or die 'no db config';
+    return $class->SUPER::new(%{$config}, %args);
+}
 
 sub get_by_id {
     my $self = shift;
