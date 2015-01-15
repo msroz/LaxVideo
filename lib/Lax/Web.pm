@@ -1,9 +1,11 @@
 package Lax::Web;
-use strict;
 use warnings;
+use v5.20.1;
 use utf8;
 use parent qw/Lax Amon2::Web/;
 use File::Spec;
+
+use Lax::Util::ENV qw/under_maintenance/;
 
 # dispatcher
 use Lax::Web::Dispatcher;
@@ -31,6 +33,14 @@ use Lax::Web::View;
 
 # for your security
 __PACKAGE__->add_trigger(
+    BEFORE_DISPATCH => sub {
+        my ($c) = @_;
+
+        if ( under_maintenance() ) {
+            say "UNDER MAINTENANCE"; #TODO: logger
+            return $c->res_maintenance;
+        }
+    },
     AFTER_DISPATCH => sub {
         my ( $c, $res ) = @_;
 
@@ -45,4 +55,11 @@ __PACKAGE__->add_trigger(
     },
 );
 
+sub res_maintenance {
+    my ($c, $tmpl_params) = @_;
+    return $c->render('maintenance.tt',$tmpl_params);
+}
+
 1;
+
+__END__
