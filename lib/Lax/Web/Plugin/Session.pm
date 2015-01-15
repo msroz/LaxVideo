@@ -1,5 +1,5 @@
 package Lax::Web::Plugin::Session;
-use strict;
+use v5.20.1;
 use warnings;
 use utf8;
 

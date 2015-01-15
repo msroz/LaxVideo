@@ -1,5 +1,5 @@
 package Lax::Web::ViewFunctions;
-use strict;
+use v5.20.1;
 use warnings;
 use utf8;
 use parent qw(Exporter);

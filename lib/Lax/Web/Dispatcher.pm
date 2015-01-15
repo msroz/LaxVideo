@@ -1,5 +1,5 @@
 package Lax::Web::Dispatcher;
-use strict;
+use v5.20.1;
 use warnings;
 use utf8;
 use Amon2::Web::Dispatcher::RouterBoom;
