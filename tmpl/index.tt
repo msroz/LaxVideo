@@ -9,9 +9,15 @@
     [% row | dump %]
 </div>
 
-[%# DEBUG test to embed video in iframe %]
-<iframe id="ytplayer" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=0&origin=http://example.com" frameborder="0"/>
+<!--div>
+    [% FOREACH video IN list %]
+        <iframe id="ytplayer" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/[% video.youtube_id %]?autoplay=0&origin=http://example.com" frameborder="0"/>
+    [% END %]
+</div-->
 
+[%# DEBUG test to embed video in iframe %]
+<!--iframe id="ytplayer" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=0&origin=http://example.com" frameborder="0"/>
+-->
 <style>
     .marketing .row {
         margin-top: 20px;

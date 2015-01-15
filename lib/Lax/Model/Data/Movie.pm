@@ -13,7 +13,26 @@ sub fetch_by_id {
     return $row;
 }
 
-sub search {}
+sub search {
+    my $self = shift;
+    my $args = args(
+        +{
+            limit  => 0,
+            offset => 0,
+            status => 0,
+        }, @_
+    );
+
+    my $iter = $self->db->search(
+        'movies',
+        [ status => 0 ],
+        {
+            order_by => { id => 'desc' },
+        },
+    );
+
+    return [ $iter->all ];
+}
 sub insert {}
 sub update {}
 

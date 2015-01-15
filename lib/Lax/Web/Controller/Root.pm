@@ -10,9 +10,11 @@ sub index {
 
     my $instance = Lax::Container->instance;
     my $row = $instance->model('Data::Movie')->fetch_by_id(id => 1);
+    my $rows = $instance->model('Data::Movie')->search();
 
     my $tmple_params = +{
-        row => $row ? $row->get_columns : +{},
+        row  => $row ? $row->get_columns : +{},
+        list => $rows,
     };
     return $c->render('index.tt', $tmple_params);
 }
