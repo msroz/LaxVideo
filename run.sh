@@ -4,6 +4,7 @@ set -e
 
 LAX_ENV=development
 LAX_MAINTENANCE=0
+#LAX_MAINTENANCE=1
 PLACK_ENV=production
 
 RUN_COMMAND="

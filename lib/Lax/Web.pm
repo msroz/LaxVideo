@@ -57,7 +57,10 @@ __PACKAGE__->add_trigger(
 
 sub res_maintenance {
     my ($c, $tmpl_params) = @_;
-    return $c->render('maintenance.tt',$tmpl_params);
+    my $res = $c->render('maintenance.tt',$tmpl_params);
+    $res->status(503);
+
+    return $res;
 }
 
 1;
