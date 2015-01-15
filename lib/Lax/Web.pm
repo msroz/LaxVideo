@@ -60,6 +60,9 @@ sub res_maintenance {
     my $res = $c->render('maintenance.tt',$tmpl_params);
     $res->status(503);
 
+    # for SEO.
+    # http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.37
+    $res->header('Retry-After' => 60 * 60 * 24);
     return $res;
 }
 
