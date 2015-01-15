@@ -10,7 +10,7 @@ use Lax::Util::ENV qw/under_maintenance/;
 # dispatcher
 use Lax::Web::Dispatcher;
 sub dispatch {
-    return (Lax::Web::Dispatcher->dispatch($_[0]) or die "response is not generated");
+    return (Lax::Web::Dispatcher->new->dispatch($_[0]) or die "response is not generated");
 }
 
 # load plugins

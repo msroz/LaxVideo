@@ -7,6 +7,7 @@ use Path::Tiny qw/path/;
 
 common {
     base_dir => path('./log')->absolute . '/',
+    level    => 'DEBUG',
     pattern  => undef, # print stderr
 };
 
