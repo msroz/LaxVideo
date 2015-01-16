@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row">
+    <div class="row video-container">
         <div class="seven columns">
             <iframe src="//player.vimeo.com/video/[% video.video_id %]"
                 width="512"
@@ -10,11 +10,22 @@
             </iframe>
         </div>
         <div class="five columns">
-            <h5>
-                <strong>
-                    Title: [% video. title %]
-                </strong>
-            </h5>
+            <div class="video-explanation">
+                <h5>
+                    <strong>
+                        [% video. title %]
+                    </strong>
+                </h5>
+                <div class="video-button-collection">
+                    <button class="lax-btn-twitter lax-font-white">TW</button>
+                    <button class="lax-btn-facebook lax-font-white">FB</button>
+                </div>
+                <div class="video-button-collection">
+                    <button class="lax-btn-like">LIKE</button>
+                    <button class="lax-btn-dislike">DISLIKE</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+

@@ -1,0 +1,17 @@
+<div class="section search">
+    <div class="container">
+        <div class="row">
+            <div class="twelve column">
+                <div class="video-center">
+                    <button class="button">Previous Page</button>
+                    <button class="button">Random</button>
+                    <button class="button">Next Page</button>
+                    [% IF(location == 'bottom') %]
+                    [%# show button to the top at bottom %]
+                    <button class="button">Top</button>
+                    [% END#if %]
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -32,9 +32,10 @@
     <!-- CSS -->
     <link href="[% static_file('/static/skeleton-2.0.4/css/normalize.css') %]" rel="stylesheet" type="text/css" media="screen" />
     <link href="[% static_file('/static/skeleton-2.0.4/css/skeleton.css') %]" rel="stylesheet" type="text/css" media="screen" />
+    <link href="[% static_file('/static/css/video.css') %]" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
-    <header id="header">
+    <header class="header">
         [% INCLUDE 'include/header.tt' %]
     </header>
 
@@ -43,6 +44,5 @@
     <footer class="footer">
         [% INCLUDE 'include/footer.tt' %]
     </footer>
-    </div>
 </body>
 </html>

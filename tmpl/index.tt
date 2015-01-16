@@ -1,9 +1,26 @@
 [% WRAPPER 'include/layout.tt' %]
 
+<div class="section top">
+    <div class="container">
+        <div class="row">
+            <div class="twelve column">
+                <img src="[% static_file('/static/img/lax_video_logo.png') %]" alt="LAX VIDEO">
+                <h4 class="video-align">Just play. Have fun. Enjoy the game.</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr/>
+
+[% INCLUDE 'include/search.tt' WITH location = 'top' %]
+
 <div class="section video">
     [% FOREACH video IN list %]
         [% INCLUDE 'include/video.tt' WITH video = video %]
     [% END#foreach %]
 </div>
+
+[% INCLUDE 'include/search.tt' WITH location = 'bottom' %]
 
 [% END #wrapper %]
