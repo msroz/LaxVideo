@@ -27,6 +27,7 @@ requires 'Micro::Container';
 requires 'Class::Accessor::Lite';
 requires 'Sub::Args';
 requires 'Class::Load';
+requires 'JSON::XS';
 
 on configure => sub {
     # default module made by amon2-setup.pl
