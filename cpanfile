@@ -15,7 +15,7 @@ requires 'Test::WWW::Mechanize::PSGI';
 requires 'Text::Xslate', '2.0009';
 requires 'Text::Xslate::Bridge::TT2Like';
 requires 'Time::Piece', '1.20';
-requires 'perl', '5.010_001';
+requires 'perl', '5.020_001';
 
 
 # added module for Lax
