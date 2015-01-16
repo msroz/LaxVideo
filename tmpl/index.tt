@@ -2,16 +2,7 @@
 
 <div class="section video">
     [% FOREACH video IN list %]
-    <div class="container">
-        <div class="row">
-            <div class="one-half column">
-                <iframe src="//player.vimeo.com/video/[% video.video_id %]" width="512" height="288" frameborder="0" title="The New Vimeo Player (You Know, For Videos)" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div>
-            <div class="one-half column">
-                <h4>Title: [% video.title %]</h4>
-            </div>
-        </div>
-    </div>
+        [% INCLUDE 'include/video.tt' WITH video = video %]
     [% END#foreach %]
 </div>
 
