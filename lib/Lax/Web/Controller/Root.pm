@@ -9,8 +9,8 @@ sub index {
     my ($self, $c) = @_;
 
     my $instance = Lax::Container->instance;
-    my $row = $instance->model('Data::Movie')->fetch_by_id(id => 1);
-    my $rows = $instance->model('Data::Movie')->search();
+    my $row = $instance->model('Data::Video')->fetch_by_id(id => 1);
+    my $rows = $instance->model('Data::Video')->search();
 
     my $tmple_params = +{
         row  => $row ? $row->get_columns : +{},

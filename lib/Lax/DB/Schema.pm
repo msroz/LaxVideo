@@ -1,27 +1,29 @@
 package Lax::DB::Schema;
-use v5.20.1;
+use strict;
 use warnings;
-use utf8;
-
 use Teng::Schema::Declare;
-
-base_row_class 'Lax::DB::Row';
-
 table {
-    name 'movies';
+    name 'videos';
     pk 'id';
-    columns qw(
-        id
-        status
-        title
-        url
-        youtube_id
-        score
-        like
-        dislike
-        created_at
-        updated_at
+    columns (
+        {name => 'id', type => 4},
+        {name => 'status', type => 4},
+        {name => 'video_id', type => 12},
+        {name => 'title', type => 12},
+        {name => 'description', type => 12},
+        {name => 'link', type => 12},
+        {name => 'uri', type => 12},
+        {name => 'width', type => 4},
+        {name => 'height', type => 4},
+        {name => 'picture', type => 12},
+        {name => 'duration', type => 4},
+        {name => 'score', type => 4},
+        {name => 'like', type => 4},
+        {name => 'dislike', type => 4},
+        {name => 'created_at', type => 4},
+        {name => 'updated_at', type => 4},
     );
 };
 
 1;
+
