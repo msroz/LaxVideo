@@ -4,7 +4,7 @@ use warnings;
 use utf8;
 use File::Spec;
 use File::Basename;
-use lib File::Spec->catdir(dirname(__FILE__), '../lib');
+use lib File::Spec->catdir(dirname(__FILE__), './lib');
 use Plack::Builder;
 
 use Lax::Web;
@@ -15,10 +15,10 @@ use File::Path ();
 my $app = builder {
     enable 'Plack::Middleware::Static',
         path => qr{^(?:/static/)},
-        root => File::Spec->catdir(dirname(__FILE__), '..');
+        root => File::Spec->catdir(dirname(__FILE__));
     enable 'Plack::Middleware::Static',
         path => qr{^(?:/robots\.txt|/favicon\.ico)$},
-        root => File::Spec->catdir(dirname(__FILE__), '..', 'static');
+        root => File::Spec->catdir(dirname(__FILE__), 'static');
     enable 'Plack::Middleware::ReverseProxy';
 
     Lax::Web->to_app();
