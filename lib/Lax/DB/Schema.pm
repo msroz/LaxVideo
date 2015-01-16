@@ -8,11 +8,10 @@ table {
     columns (
         {name => 'id', type => 4},
         {name => 'status', type => 4},
-        {name => 'video_id', type => 12},
+        {name => 'video_id', type => 4},
         {name => 'title', type => 12},
         {name => 'description', type => 12},
         {name => 'link', type => 12},
-        {name => 'uri', type => 12},
         {name => 'width', type => 4},
         {name => 'height', type => 4},
         {name => 'picture', type => 12},
