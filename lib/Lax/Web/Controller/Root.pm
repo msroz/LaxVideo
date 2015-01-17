@@ -1,6 +1,6 @@
 package Lax::Web::Controller::Root;
 use warnings;
-use v5.20.1;
+use strict;
 
 use Lax::Container;
 use parent qw/Lax::Web::Controller/;

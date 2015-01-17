@@ -1,6 +1,6 @@
 package Lax::Config::Router;
 use warnings;
-use v5.20.1;
+use strict;
 
 use Config::ENV 'LAX_ENV';
 

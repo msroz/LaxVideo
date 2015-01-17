@@ -1,5 +1,5 @@
 package Lax::DB;
-use v5.20.1;
+use strict;
 use warnings;
 use utf8;
 use parent qw(Teng);

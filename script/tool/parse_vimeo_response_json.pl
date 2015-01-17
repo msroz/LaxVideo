@@ -1,11 +1,11 @@
 #!/usr/bin/env perl
 use warnings;
-use v5.20.1;
+use strict;
 
 use JSON::Parse qw/json_file_to_perl/;
 use Data::Dumper;
 use Lax::Container;
-
+use feature 'say';
 my $instance = Lax::Container->instance;
 
 my @fields = qw/

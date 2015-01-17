@@ -1,5 +1,5 @@
 package Lax;
-use v5.20.1;
+use strict;
 use warnings;
 use utf8;
 our $VERSION='0.01';

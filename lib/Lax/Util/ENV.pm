@@ -1,6 +1,6 @@
 package Lax::Util::ENV;
 use warnings;
-use v5.20.1;
+use strict;
 
 use parent qw/Exporter/;
 our @EXPORT_OK = qw/

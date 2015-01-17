@@ -1,6 +1,6 @@
 package Lax::Log;
 use warnings;
-use v5.20.1;
+use strict;
 
 use parent qw/Log::Minimal::Instance/;
 use Log::Minimal qw//;

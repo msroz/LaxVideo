@@ -1,6 +1,6 @@
 package Lax::Config::Log;
 use warnings;
-use v5.20.1;
+use strict;
 
 use Config::ENV 'LAX_ENV';
 use Path::Tiny qw/path/;

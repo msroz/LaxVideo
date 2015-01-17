@@ -1,6 +1,6 @@
 package Lax::Base;
 use warnings;
-use v5.20.1;
+use strict;
 
 use parent 'Class::Accessor::Lite';
 

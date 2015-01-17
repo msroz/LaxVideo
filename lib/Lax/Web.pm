@@ -1,6 +1,6 @@
 package Lax::Web;
 use warnings;
-use v5.20.1;
+use strict;
 use utf8;
 use parent qw/Lax Amon2::Web/;
 use File::Spec;
@@ -37,7 +37,6 @@ __PACKAGE__->add_trigger(
         my ($c) = @_;
 
         if ( under_maintenance() ) {
-            say "UNDER MAINTENANCE"; #TODO: logger
             return $c->res_maintenance;
         }
     },

@@ -1,6 +1,6 @@
 package Lax::Model::Data::Video;
 use warnings;
-use v5.20.1;
+use strict;
 
 use parent qw/Lax::Model/;
 use Sub::Args;

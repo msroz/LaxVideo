@@ -1,6 +1,7 @@
 package Lax::Root;
 use warnings;
-use v5.20.1;
+use strict;
+use feature 'state';
 
 use parent qw/Lax::Base/;
 use Lax::Container;

@@ -1,10 +1,11 @@
 #!/usr/bin/env perl
 use warnings;
-use v5.20.1;
+use strict;
 
 use DBI;
 use Teng::Schema::Dumper;
 use Data::Dumper;
+use feature 'say';
 
 my $dbh = DBI->connect(
     "DBI:mysql:dbname=lax;", 'lax', '',

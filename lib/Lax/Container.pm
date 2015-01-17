@@ -1,6 +1,7 @@
 package Lax::Container;
 use warnings;
-use v5.20.1;
+use strict;
+use feature 'state';
 
 use parent qw/Micro::Container/;
 

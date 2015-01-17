@@ -1,5 +1,5 @@
 package Lax::Web::Dispatcher;
-use v5.20.1;
+use strict;
 use warnings;
 
 use Router::Simple;
