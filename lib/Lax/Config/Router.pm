@@ -12,6 +12,13 @@ common {
         action     => 'index',
         method     => 'GET',
     },
+    about_me => +{
+        action_id  => 'about_me',
+        path       => '/me',
+        controller => 'Root',
+        action     => 'about_me',
+        method     => 'GET',
+    },
 };
 
 1;

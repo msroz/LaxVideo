@@ -19,6 +19,12 @@ sub index {
     return $c->render('index.tt', $tmple_params);
 }
 
+sub about_me {
+    my ($self, $c) = @_;
+
+    return $c->render('about_me.tt', +{});
+}
+
 1;
 
 __END__
