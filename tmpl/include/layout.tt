@@ -14,8 +14,9 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="">
+    <!-- Images -->
+    <link rel="shortcut icon" href="[% static_file('/static/img/favicon.png') %]" />
+    <link rel="apple-touch-icon" href="[% static_file('/static/img/apple_touch_icon.png') %]" />
 
     <!-- Font -->
     <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
