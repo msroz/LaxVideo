@@ -45,5 +45,8 @@
     <footer class="footer">
         [% INCLUDE 'include/footer.tt' %]
     </footer>
+
+    [%# google analytics %]
+    [% INCLUDE 'include/ga.tt' %]
 </body>
 </html>
