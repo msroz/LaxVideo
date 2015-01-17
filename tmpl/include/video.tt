@@ -17,10 +17,6 @@
                     </strong>
                 </h5>
                 <div class="video-button-collection">
-                    <button class="lax-btn-twitter lax-font-white">TW</button>
-                    <button class="lax-btn-facebook lax-font-white">FB</button>
-                </div>
-                <div class="video-button-collection">
                     <button class="lax-btn-like">LIKE</button>
                     <button class="lax-btn-dislike">DISLIKE</button>
                 </div>

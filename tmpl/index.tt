@@ -13,6 +13,10 @@
 
 <hr/>
 
+[% INCLUDE 'include/sns.tt' %]
+
+<hr/>
+
 [% INCLUDE 'include/search.tt' WITH location = 'top' %]
 
 <div class="section video">
