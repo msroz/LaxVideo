@@ -3,15 +3,24 @@
         <div class="row">
             <div class="twelve column">
                 <div class="video-center">
-                    <button class="button">Previous Page</button>
+                    [% IF(pager.previous) %]
+                        <button class="button pager" data-page="[% pager.previous %]">
+                            Previous
+                        </button>
+                    [% END %]
                     <button class="button">Random</button>
-                    <button class="button">Next Page</button>
+                    [% IF(pager.next) %]
+                        <button class="button pager" data-page="[% pager.next %]">
+                            Next
+                        </button>
+                    [% END %]
                     [% IF(location == 'bottom') %]
-                    [%# show button to the top at bottom %]
-                    <button class="button">Top</button>
+                        [%# show button to the top at bottom %]
+                        <button class="button">Top</button>
                     [% END#if %]
                 </div>
             </div>
         </div>
     </div>
 </div>
+

@@ -17,8 +17,7 @@
                     </strong>
                 </h5>
                 <div class="video-button-collection">
-                    <button class="lax-btn-like">LIKE</button>
-                    <button class="lax-btn-dislike">DISLIKE</button>
+                    <a class="button" href="/videos/[% video.id %]">DETAIL</a>
                 </div>
             </div>
         </div>

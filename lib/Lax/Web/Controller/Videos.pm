@@ -1,4 +1,4 @@
-package Lax::Web::Controller::Root;
+package Lax::Web::Controller::Videos;
 use warnings;
 use strict;
 
@@ -21,16 +21,32 @@ sub index {
     my $order   = $res->query->param('order')   || 'desc';
     my $sort_by = $res->query->param('sort_by');
 
-    my $rows = $self->model('Video')->collection(
+    my ($rows, $pager) = $self->model('Video')->collection(
         page  => $page,
         order => $order,
         (sort_by => $sort_by) x !!$sort_by,
     );
 
     my $tmple_params = +{
+        pager => +{
+            current  => $pager ? $pager->current_page  : 1,
+            next     => $pager ? $pager->next_page     : 0,
+            previous => $pager ? $pager->previous_page : 0,
+        },
         list => $rows,
     };
     return $c->render('index.tt', $tmple_params);
+}
+
+sub show {
+    my ($self, $c, $matched) = @_;
+
+    my $id = $matched->{id};
+
+    my $row = $self->model('Video')->one(
+        id => $id
+    );
+    return $c->render('index.tt', +{ list => [ $row ] });
 }
 
 sub about_me {

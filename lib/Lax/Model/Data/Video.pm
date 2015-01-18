@@ -17,21 +17,23 @@ sub search {
     my $self = shift;
     my $args = args(
         +{
-            limit  => 0,
-            offset => 0,
+            page   => 1,
+            limit  => 1,
             status => 0,
         }, @_
     );
 
-    my $iter = $self->db->search(
+    my ($rows, $pager) = $self->db->search_with_pager(
         'videos',
         [ status => 0 ],
         {
             order_by => { id => 'desc' },
+            page => $args->{page},
+            rows => $args->{limit},
         },
     );
 
-    return [ $iter->all ];
+    return ($rows, $pager);
 }
 sub insert {}
 sub update {}
