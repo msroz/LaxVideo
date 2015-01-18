@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+
+    <!-- Basic Page Need -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Lax Video</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas -->
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Images -->
+    <link rel="shortcut icon" href="[% static_file('/static/img/favicon.png') %]" />
+    <link rel="apple-touch-icon" href="[% static_file('/static/img/apple_touch_icon.png') %]" />
+
+    <!-- Font -->
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+    <!-- Scripts -->
+    <!--script src="[% uri_for('/static/js/micro_template.js') %]"></script-->
+    <!--script src="[% uri_for('/static/js/strftime.js') %]"></script-->
+    <!--script src="[% uri_for('/static/js/sprintf.js') %]"></script-->
+    <!--script src="[% uri_for('/static/js/micro-location.js') %]"></script-->
+    <!--script src="[% uri_for('/static/js/micro_dispatcher.js') %]"></script-->
+    <!--script src="[% uri_for('/static/js/xsrf-token.js') %]"></script-->
+    <script src="[% static_file('/static/js/jquery-2.1.1.min.js') %]"></script>
+    <script src="[% static_file('/static/js/video.js') %]"></script>
+
+    <!-- CSS -->
+    <link href="[% static_file('/static/skeleton-2.0.4/css/normalize.css') %]" rel="stylesheet" type="text/css" media="screen" />
+    <link href="[% static_file('/static/skeleton-2.0.4/css/skeleton.css') %]" rel="stylesheet" type="text/css" media="screen" />
+    <link href="[% static_file('/static/css/video.css') %]" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+    <header class="header">
+        [% INCLUDE 'include/header.tt' %]
+    </header>
+
+    [% content %]
+
+    <footer class="footer">
+        [% INCLUDE 'include/footer.tt' %]
+    </footer>
+
+    [%# google analytics %]
+    [% INCLUDE 'include/ga.tt' %]
+</body>
+</html>

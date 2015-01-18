@@ -1,0 +1,36 @@
+[% WRAPPER 'include/layout.tt' %]
+
+<div class="section top">
+    <div class="container">
+        <div class="row">
+            <div class="one column">
+            </div>
+            <div class="ten columns">
+                <img class="vide-img-logo" src="[% static_file('/static/img/lax_video_logo.png') %]" alt="LAX VIDEO">
+                <h4 class="video-align">Just play. Have fun. Enjoy the game.</h4>
+            </div>
+            <div class="one column">
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr/>
+
+[% INCLUDE 'include/sns.tt' %]
+
+<hr/>
+
+<div class="section search">
+    [% INCLUDE 'include/search.tt' WITH location = 'top', pager = pager %]
+</div>
+
+<div id="video-list" class="section video">
+    [% INCLUDE 'include/videos.tt' WITH list = list %]
+</div>
+
+<div class="section search">
+    [% INCLUDE 'include/search.tt' WITH location = 'bottom', pager = pager %]
+</div>
+
+[% END #wrapper %]
