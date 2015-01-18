@@ -13,6 +13,13 @@ use URI::Escape;
 use File::Path ();
 
 my $app = builder {
+    enable "Plack::Middleware::ErrorDocument",
+         404 => "static/404.html",
+         500 => "static/500.html",
+         502 => "static/502.html",
+         503 => "static/503.html",
+         504 => "static/504.html",
+         ;
     enable 'Plack::Middleware::Static',
         path => qr{^(?:/static/)},
         root => File::Spec->catdir(dirname(__FILE__));

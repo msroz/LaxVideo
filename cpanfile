@@ -32,6 +32,7 @@ requires 'Router::Simple';
 requires 'DBI';
 requires 'DBD::mysql';
 requires 'FormValidator::Lite';
+requires 'Plack::Middleware::ErrorDocument';
 
 on configure => sub {
     # default module made by amon2-setup.pl
