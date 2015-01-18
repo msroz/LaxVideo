@@ -13,10 +13,17 @@ common {
         method     => 'GET',
     },
     show_videos => +{
-        action_id  => 'index',
+        action_id  => 'show_videos',
         path       => '/videos',
         controller => 'Videos',
         action     => 'index',
+        method     => 'GET',
+    },
+    show_videos_ajax => +{
+        action_id  => 'show_videos_ajax',
+        path       => '/videos_ajax',
+        controller => 'Videos',
+        action     => 'index_ajax',
         method     => 'GET',
     },
     show_video => +{

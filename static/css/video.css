@@ -9,6 +9,13 @@ a:visited {
     background-color: #FFF;
 }
 
+.video-non-disp {
+    display: none;
+}
+.video-block-disp {
+    display: block;
+}
+
 .video-align {
     text-align: center;
 }

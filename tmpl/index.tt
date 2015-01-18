@@ -21,14 +21,16 @@
 
 <hr/>
 
-[% INCLUDE 'include/search.tt' WITH location = 'top', pager = pager %]
-
-<div class="section video">
-    [% FOREACH video IN list %]
-        [% INCLUDE 'include/video.tt' WITH video = video %]
-    [% END#foreach %]
+<div class="section search">
+    [% INCLUDE 'include/search.tt' WITH location = 'top', pager = pager %]
 </div>
 
-[% INCLUDE 'include/search.tt' WITH location = 'bottom', pager = pager %]
+<div id="video-list" class="section video">
+    [% INCLUDE 'include/videos.tt' WITH list = list %]
+</div>
+
+<div class="section search">
+    [% INCLUDE 'include/search.tt' WITH location = 'bottom', pager = pager %]
+</div>
 
 [% END #wrapper %]
