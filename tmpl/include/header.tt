@@ -4,7 +4,7 @@
             <div class="one column">
             </div>
             <div class="ten columns">
-                <img class="u-max-full-width" src="[% static_file('/static/img/lax_video_logo.png') %]" alt="LAX VIDEO">
+                <img class="u-max-full-width video-img" src="[% static_file('/static/img/lax_video_logo.png') %]" alt="LAX VIDEO">
                 <h4 class="video-align">Just play. Have fun. Enjoy the game.</h4>
             </div>
             <div class="one column">
