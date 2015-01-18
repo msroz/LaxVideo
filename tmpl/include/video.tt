@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row video-container">
+        <div class="seven columns">
+            <iframe class="video-itsself" src="//player.vimeo.com/video/[% video.video_id %]"
+                width="512"
+                height="288"
+                frameborder="0"
+                title="[% video.title %]"
+                webkitallowfullscreen mozallowfullscreen allowfullscreen>
+            </iframe>
+        </div>
+        <div class="five columns">
+            <div class="video-explanation">
+                <h5>
+                    <strong>
+                        [% video. title %]
+                    </strong>
+                </h5>
+                <div class="video-button-collection">
+                    <a class="button" href="/videos/[% video.id %]">DETAIL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

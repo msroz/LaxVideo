@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+LAX_ENV=development
+LAX_MAINTENANCE=0
+#LAX_MAINTENANCE=1
+PLACK_ENV=production
+
+RUN_COMMAND="
+env
+LAX_ENV=$LAX_ENV
+LAX_MAINTENANCE=$LAX_MAINTENANCE
+plackup
+"
+echo $RUN_COMMAND
+exec $RUN_COMMAND
