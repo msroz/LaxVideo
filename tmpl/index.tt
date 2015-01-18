@@ -1,10 +1,6 @@
 [% WRAPPER 'include/layout.tt' %]
 
-<hr/>
-
 [% INCLUDE 'include/sns.tt' %]
-
-<hr/>
 
 <div class="section search">
     [% INCLUDE 'include/search.tt' WITH location = 'top', pager = pager %]
