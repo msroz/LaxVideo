@@ -28,7 +28,8 @@
     <!--script src="[% uri_for('/static/js/micro-location.js') %]"></script-->
     <!--script src="[% uri_for('/static/js/micro_dispatcher.js') %]"></script-->
     <!--script src="[% uri_for('/static/js/xsrf-token.js') %]"></script-->
-    <!--script src="[% static_file('/static/js/main.js') %]"></script-->
+    <script src="[% static_file('/static/js/jquery-2.1.1.min.js') %]"></script>
+    <script src="[% static_file('/static/js/video.js') %]"></script>
 
     <!-- CSS -->
     <link href="[% static_file('/static/skeleton-2.0.4/css/normalize.css') %]" rel="stylesheet" type="text/css" media="screen" />

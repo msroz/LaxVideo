@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row video-container">
         <div class="seven columns">
-            <iframe src="//player.vimeo.com/video/[% video.video_id %]"
+            <iframe class="video-itsself" src="//player.vimeo.com/video/[% video.video_id %]"
                 width="512"
                 height="288"
                 frameborder="0"
