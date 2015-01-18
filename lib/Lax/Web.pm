@@ -50,7 +50,8 @@ __PACKAGE__->add_trigger(
         $res->header( 'X-Frame-Options' => 'DENY' );
 
         # Cache control.
-        $res->header( 'Cache-Control' => 'private' );
+        $res->header( 'Cache-Control' => 'no-cache' );
+        $res->header( 'Pragma'        => 'no-cache' );
     },
 );
 
