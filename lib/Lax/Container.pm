@@ -6,9 +6,10 @@ use feature 'state';
 use parent qw/Micro::Container/;
 
 __PACKAGE__->register(
-    'Lax::Log' => [],
-    'Lax::DB'  => [],
-    'Lax::Model::Data::Video'  => [],
+    'Lax::Log'                => [],
+    'Lax::DB'                 => [],
+    'Lax::Model::Video'       => [],
+    'Lax::Model::Data::Video' => [],
 );
 
 sub logger { state $cache = shift->get('Lax::Log') }

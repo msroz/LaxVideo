@@ -31,6 +31,7 @@ requires 'JSON::XS';
 requires 'Router::Simple';
 requires 'DBI';
 requires 'DBD::mysql';
+requires 'FormValidator::Lite';
 
 on configure => sub {
     # default module made by amon2-setup.pl

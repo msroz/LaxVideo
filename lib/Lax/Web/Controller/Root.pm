@@ -6,14 +6,18 @@ use Lax::Container;
 use parent qw/Lax::Web::Controller/;
 
 sub index {
-    my ($self, $c) = @_;
+    my ($self, $c, $matched) = @_;
 
-    my $instance = Lax::Container->instance;
-    my $row = $instance->model('Data::Video')->fetch_by_id(id => 1);
-    my $rows = $instance->model('Data::Video')->search();
+    my $v = $self->form_validator($c);
+    $v->check(
+        page    => [qw/UINT/],
+        order   => [qw//],
+        sort_by => [qw//],
+    );
+
+    my $rows = $self->model('Video')->collection();
 
     my $tmple_params = +{
-        row  => $row ? $row->get_columns : +{},
         list => $rows,
     };
     return $c->render('index.tt', $tmple_params);
