@@ -23,9 +23,25 @@
         </style>
     </head>
     <body>
-        <div class="number">
-            <img src="./static/img/404.gif">
+        <div id="video404">
+            <div class="number"><img src="./static/img/404.gif"></div>
+            <div class="message">Not Found</div>
         </div>
-        <div class="message">Not Found</div>
+        <div id="video777">
+            <div class="number"><img src="./static/img/777.gif"></div>
+            <div class="message lucky">Not Found, But Lucky!!</div>
+        </div>
     </body>
+    <script type="text/javascript">
+        var random = Math.floor( Math.random() * 5 );
+        if (random > 0) {
+            var dom777 = document.getElementById('video777');
+            dom777.style.display = 'none';
+        }
+        else {
+            var dom404 = document.getElementById('video404');
+            dom404.style.display = 'none';
+            console.log('You are lucky!!!!Its gonna be a good day.');
+        }
+    </script>
 </html>
