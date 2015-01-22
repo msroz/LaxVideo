@@ -16,7 +16,7 @@ console.log('image.js loaded');
                   dataType: "json",
                   data: {
                       base64: base64,
-                      type: file.type,
+                      type:   file.type,
                   },
                   success: function(responseData) {
                      console.log('success');
@@ -24,6 +24,7 @@ console.log('image.js loaded');
                      $('#video-result-image').attr('src', e.target.result);
                      $('#video-form-base64').val(responseData.base64);
                      $('#video-form-title').val(responseData.message);
+                     $('#video-form-type').val(responseData.type);
                   },
             });
         };

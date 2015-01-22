@@ -7,6 +7,7 @@
             <form action="/image/upload" method="POST" enctype="multipart/form-data">
                 <input id="video-form-title" type="text" name="title" value="" required>
                 <input id="video-form-base64" type="hidden" name="base64" value="">
+                <input id="video-form-type" type="hidden" name="type" value="">
                 <input class="button" type="submit" name="submit">
             </form>
         </div>

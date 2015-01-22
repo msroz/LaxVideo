@@ -13,10 +13,11 @@ sub form {
 sub upload {
     my ($self, $c) = @_;
     return $c->render_json( +{
-        title => $c->req->parameters->{title},
+        title   => $c->req->parameters->{title},
         message => 'post success',
         size    => length $c->req->parameters->{base64},
-#        base64  => $c->req->parameters->{base64},
+        type    => $c->req->parameters->{type},
+        base64  => $c->req->parameters->{base64},
     });
 }
 
