@@ -40,6 +40,20 @@ common {
         action     => 'about_me',
         method     => 'GET',
     },
+    form_image => +{
+        action_id  => 'form_image',
+        path       => '/image/new',
+        controller => 'Images',
+        action     => 'form',
+        method     => 'GET',
+    },
+    upload_image => +{
+        action_id  => 'upload_image',
+        path       => '/image/upload',
+        controller => 'Images',
+        action     => 'upload',
+        method     => 'POST',
+    },
 };
 
 1;

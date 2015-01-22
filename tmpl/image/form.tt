@@ -1,0 +1,23 @@
+[% WRAPPER 'include/layout.tt' %]
+
+<div class="container">
+    <div class="row">
+        <div class="twelve columns">
+            <input id="video-file" type="file" name="image" />
+            <form action="/image/upload" method="POST" enctype="multipart/form-data">
+                <input id="video-form-title" type="text" name="title" value="" required>
+                <input id="video-form-base64" type="hidden" name="base64" value="">
+                <input class="button" type="submit" name="submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div>
+    <img id='video-result-image' src="" style="width:100px;height:100px">
+</div>
+
+<script src="[% static_file('/static/js/image.js') %]"></script>
+
+</script>
+[% END #wrapper %]
