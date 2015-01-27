@@ -45,7 +45,6 @@ sub dispatch {
             my $controller = sprintf 'Lax::Web::Controller::%s', $matched->{controller};
             my $action     = $matched->{action};
 
-die;
             $CLASS_LOADED{$controller} //= do {
                 Lax::Util::load_class($controller);
                 $controller;
