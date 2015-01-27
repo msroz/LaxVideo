@@ -8,48 +8,32 @@ console.log('read js start');
 
 $(function(){
     "use strict";
+    var $pagerNext = $('.pager-next');
+    var $pagerPrev = $('.pager-previous');
     // function
     function togglePrevBtn (previous) {
         console.log("previous" + previous);
-        var pagerPrev = $('.pager-previous');
-        pagerPrev.data('page', previous);
+        $pagerPrev.data('page', previous);
         if (previous) {
-            if (pagerPrev.hasClass('video-non-disp')) {
-                pagerPrev.removeClass('video-non-disp');
-            }
-            if (!pagerPrev.hasClass('video-inline-disp')) {
-                pagerPrev.addClass('video-inline-disp');
+            if (!$pagerPrev.hasClass('pager')) {
+                $pagerPrev.addClass('pager');
             }
         }
         else {
-            if (!pagerPrev.hasClass('video-non-disp')) {
-                pagerPrev.addClass('video-non-disp');
-            }
-            if (pagerPrev.hasClass('video-inline-disp')) {
-                pagerPrev.removeClass('video-inline-disp');
-            }
+            $pagerPrev.removeClass('pager');
         }
     };
 
     function toggleNextBtn (next) {
         console.log("next" + next);
-        var pagerNext = $('.pager-next');
-        pagerNext.data('page', next);
+        $pagerNext.data('page', next);
         if (next) {
-            if (pagerNext.hasClass('video-non-disp')) {
-                pagerNext.removeClass('video-non-disp');
-            }
-            if (!pagerNext.hasClass('video-inline-disp')) {
-                pagerNext.addClass('video-inline-disp');
+            if (!$pagerNext.hasClass('pager')) {
+                $pagerNext.addClass('pager');
             }
         }
         else {
-            if (!pagerNext.hasClass('video-non-disp')) {
-                pagerNext.addClass('video-non-disp');
-            }
-            if (pagerNext.hasClass('video-inline-disp')) {
-                pagerNext.removeClass('video-inline-disp');
-            }
+            $pagerNext.removeClass('pager');
         }
     };
 
@@ -58,10 +42,10 @@ $(function(){
     togglePrevBtn(0);
 
     // actionevent
-    $('.pager').click(function(){
+    $('.video-pager-event').on('click', '.pager', function(){
         console.log('pager clicked!');
         var page = $(this).data('page');
-        console.log(page);
+        console.log("clicked" + page);
 
         $.ajax({
             type: "GET",

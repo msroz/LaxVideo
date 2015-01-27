@@ -6,12 +6,8 @@ a:hover {
     background-color: #FFF;
 }
 a:visited {
-    background-color: #FFF;
 }
 
-.video-non-disp {
-    display: none;
-}
 .video-block-disp {
     display: block;
 }
@@ -64,3 +60,19 @@ a:visited {
     display: block;
     margin: 0 auto;
 }
+
+.pager-previous {
+    background-color: #B7B7B7;
+    border-style: none;
+}
+
+.pager-next {
+    background-color: #B7B7B7;
+    border-style: none;
+}
+
+.pager {
+    background-color: #eee;
+    border: 1px solid #888;
+}
+
