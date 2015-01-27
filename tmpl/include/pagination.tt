@@ -1,12 +1,12 @@
 <div class="container">
     <div class="row">
         <div class="twelve column">
-            <div class="video-margin-auto video-pager-event">
+            <div class="video-pager-event video-align">
                 <button class="button pager pager-previous" data-page="[% pager.previous %]">
-                    Previous
+                    <<
                 </button>
                 <button class="button pager pager-next" data-page="[% pager.next %]">
-                    Next
+                    >>
                 </button>
             </div>
         </div>
