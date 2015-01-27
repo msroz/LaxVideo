@@ -35,7 +35,19 @@ sub search {
 
     return ($rows, $pager);
 }
-sub insert {}
+
+sub insert {
+    my $self = shift;
+    my $args = shift; 
+
+    my $id = $self->db->fast_insert(
+        'videos',
+        $args,
+    );
+
+    return $id;
+}
+
 sub update {}
 
 1;

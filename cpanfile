@@ -33,6 +33,9 @@ requires 'DBI';
 requires 'DBD::mysql';
 requires 'FormValidator::Lite';
 requires 'Plack::Middleware::ErrorDocument';
+requires 'Furl';
+requires 'URI';
+requires 'Text::ASCIITable';
 
 on configure => sub {
     # default module made by amon2-setup.pl

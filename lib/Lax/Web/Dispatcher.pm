@@ -41,16 +41,24 @@ sub dispatch {
     if (my $matched = $self->router->match($req->env)) {
         $self->logger->debugf("[Router Matched] %s", $self->logger->dd($matched));
 
-        my $controller = sprintf 'Lax::Web::Controller::%s', $matched->{controller};
-        my $action     = $matched->{action};
+        my $res = eval {
+            my $controller = sprintf 'Lax::Web::Controller::%s', $matched->{controller};
+            my $action     = $matched->{action};
 
-        $CLASS_LOADED{$controller} //= do {
-            Lax::Util::load_class($controller);
-            $controller;
+die;
+            $CLASS_LOADED{$controller} //= do {
+                Lax::Util::load_class($controller);
+                $controller;
+            };
+
+            $c->{args} = $matched;
+            return $controller->new->$action($c, $matched);
         };
-
-        $c->{args} = $matched;
-        return $controller->new->$action($c, $matched);
+        if (my $e = $@) {
+            $self->logger->debugf("[ERROR] %s", $e);
+            return $c->res_500;
+        }
+        return $res;
     }
     else {
         return $c->res_404;
