@@ -5,7 +5,7 @@ use strict;
 use parent qw/Lax::Model/;
 use Sub::Args;
 
-sub ENTRIES_PER_PAGE { 5 }
+sub ENTRIES_PER_PAGE { 10 }
 
 sub collection {
     my $self = shift;
