@@ -42,8 +42,7 @@
     <meta property="og:description" content="[% video.description || 'cool lacrosse video player!' %]" />
     <meta property="og:url" content="http://lax-video.red/" />
     <meta property="og:site_name" content="LAX VIDEO" />
-    <meta property="og:image" content="[% static_file('/img/apple_touch_icon.png') %]" />
-    <meta property="og:locale" content="ja" />
+    <meta property="og:image" content="http://lax-video.red/static/img/apple_touch_icon.png" />
 </head>
 <body>
     <header class="header">
