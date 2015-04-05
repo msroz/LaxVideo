@@ -17,7 +17,6 @@ requires 'Text::Xslate::Bridge::TT2Like';
 requires 'Time::Piece', '1.20';
 requires 'perl', '5.010_001';
 
-
 # added module for Lax
 requires 'Log::Minimal::Instance';
 requires 'Log::Minimal';
@@ -36,6 +35,7 @@ requires 'Plack::Middleware::ErrorDocument';
 requires 'Furl';
 requires 'URI';
 requires 'Text::ASCIITable';
+requires 'Data::HAL';
 
 on configure => sub {
     # default module made by amon2-setup.pl
