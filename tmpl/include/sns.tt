@@ -1,3 +1,4 @@
+[% SET share_url = share_url || 'http://lax-video.red/' %]
 <div class="section sns">
     <div class="container">
         <div class="row">
@@ -9,14 +10,14 @@
                      </strong>
                 </h6>
                 <div class="video-align">
-                    <a class="button lax-btn-facebook lax-font-white" href="http://www.facebook.com/sharer.php?u=http://lax-video.red&t=LAX VIDEO - lacrosse video player!!"
+                    <a class="button lax-btn-facebook lax-font-white" href="http://www.facebook.com/sharer.php?u=[% share_url %]&t=LAX VIDEO - lacrosse video player!!"
                         onClick="window.open(encodeURI(decodeURI(this.href)),
                             'sharewindow',
                             'width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!'
                         ); return false;">
                         FB
                     </a>
-                    <a class="button lax-btn-twitter lax-font-white" href="http://twitter.com/intent/tweet?text=LAX VIDEO - cool lacrosse video player!!&url=http://lax-video.red"
+                    <a class="button lax-btn-twitter lax-font-white" href="http://twitter.com/intent/tweet?text=LAX VIDEO - cool lacrosse video player!!&url=[% share_url %]"
                         onClick="window.open(encodeURI(decodeURI(this.href)),
                           'tweetwindow',
                           'width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=1'

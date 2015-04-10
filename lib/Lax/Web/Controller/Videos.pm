@@ -83,7 +83,13 @@ sub show {
     my $row = $self->model('Video')->one(
         id => $id
     );
-    return $c->render('index.tt', +{ list => [ $row ] });
+    my $share_url = sprintf("%s://%s%s",
+        $c->req->scheme,
+        $c->req->env->{HTTP_HOST},
+        $c->req->path_info,
+    );
+    $self->logger->debugf("share_url = %s", $share_url);
+    return $c->render('show.tt', +{ video => $row,  share_url => $share_url });
 }
 
 sub about_me {

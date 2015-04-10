@@ -52,6 +52,8 @@ __PACKAGE__->add_trigger(
         # Cache control.
         $res->header( 'Cache-Control' => 'no-cache' );
         $res->header( 'Pragma'        => 'no-cache' );
+
+        $c->db->disconnect;
     },
 );
 

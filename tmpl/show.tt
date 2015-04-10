@@ -1,0 +1,38 @@
+[% WRAPPER 'include/layout.tt' %]
+
+[% INCLUDE 'include/sns.tt' %]
+
+<div id="video-list" class="section video">
+<div class="container">
+    <div class="row video-container">
+        <div class="twelve columns">
+            <h5>
+                <strong>
+                    [% video.title %]
+                </strong>
+            </h5>
+            <iframe class="u-full-width" src="//player.vimeo.com/video/[% video.video_id %]"
+                width="1024"
+                height="596"
+                frameborder="0"
+                title="[% video.title %]"
+                webkitallowfullscreen mozallowfullscreen allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row video-container">
+        <div class="twelve columns">
+            <div class="video-explanation">
+                <div>
+                    <label><h5>description</h5></label>
+                    [% video.description %]
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+[% END #wrapper %]
